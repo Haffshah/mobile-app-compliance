@@ -1,142 +1,23 @@
 # Google Play Compliance
 
-## Source of truth
+**Last verified / verification date:** 2026-09-24; **Policy status:** ACTIVE, with dated future requirements below; **Effective / enforcement date:** see each item; **Official source / source type:** [Developer Program Policies](https://play.google.com/about/developer-content-policy/) / first-party policy
+**Next review:** 2026-10-24 and before every Play submission
 
-Google Play Developer Program Policies are the primary authority. This file is a structured engineering checklist and must be re-verified against the current official policy.
+## Active controls
 
-## High-risk domains
+- Keep Data safety, privacy policy, in-app disclosures and actual first-/third-party data practices accurate and consistent. Account-creating apps need in-app deletion plus a web deletion-request resource. [User Data](https://support.google.com/googleplay/android-developer/answer/10144311).
+- Request only necessary permissions and complete applicable declarations. Background location is HIGH RISK: core functionality, prominent in-app disclosure before runtime permission, declaration evidence and a reviewer video where applicable. [Guidance](https://support.google.com/googleplay/android-developer/answer/9799150).
+- Classify purchases. Digital goods/services normally use the applicable Play billing path; regional alternative-billing/external-link programs are territory- and enrollment-specific. Never generalize an exception. [US update](https://support.google.com/googleplay/android-developer/answer/15582165).
+- UGC needs reporting/moderation and suitable blocking; audit Families, ads, financial/health claims, identifiers and SDKs. Metadata and reviewer access must match the app.
+- New apps/updates target Android 16/API 36; existing availability needs Android 15/API 35. **Enforcement:** 2026-08-31; Google notes an extension path to 2026-11-01. [Source](https://developer.android.com/google/play/requirements/target-sdk).
 
-### User data and privacy
-Verify:
-- Data Safety section is accurate.
-- Privacy policy is present and consistent.
-- In-app disclosures are provided where required.
-- Consent is obtained when required.
-- Data collection/sharing by every SDK is understood.
-- Permissions are necessary and proportionate.
-- Data is not collected or shared deceptively.
+## Confirmed future requirements
 
-### Permissions
-Before adding any dangerous/special permission:
-- establish the exact user-facing feature requiring it;
-- verify the current permission-specific policy;
-- verify whether a more privacy-preserving API exists;
-- verify Play Console declaration requirements;
-- remove unused permissions.
+| Policy | Announcement | Enforcement | Status | Who / required change | Consequence / prepare by |
+| --- | --- | --- | --- | --- | --- |
+| Contacts broad access | 2026-04-15 | 2027-01-27 | FUTURE REQUIREMENT | Use Contact Picker unless broad access is justified. | Enforcement risk; audit by 2026-11-01. |
+| Precise location minimum scope | 2026-04-15 | 2027-01-27 | FUTURE REQUIREMENT | Use Location Button where applicable; fine-location declaration/justification for ongoing access. Declaration available Nov. 2026. | Enforcement risk; complete by 2026-12-15. |
+| SMS / call-log verification | 2026-07-15 | 2027-01-27 | FUTURE REQUIREMENT | Remove READ_CALL_LOG phone-call verification; use Digital Credentials or SMS Retriever. | Migrate by 2026-11-30. |
+| Foreground service geofencing | 2026-04-15 | 2027-01-27 | FUTURE REQUIREMENT | Geofencing is not an approved FGS use case; use Geofence API. | Change architecture by 2026-11-30. |
 
-High-risk examples:
-- Background location
-- Contacts
-- SMS
-- Call logs
-- Accessibility
-- VPN
-- Device administration
-- All-files access
-- Notification access
-- Exact alarms
-- Health data
-
-### Background location
-Must be treated as HIGH RISK.
-Verify:
-- location is core to the app's functionality;
-- the use case is permitted by current policy;
-- minimum necessary access is requested;
-- user disclosure/consent requirements are met;
-- Play Console declarations are completed;
-- implementation does not track users without legitimate app functionality.
-
-### Contacts
-Check the current Contacts Permissions policy.
-Prefer privacy-preserving contact picker APIs when broad contacts access is not required.
-
-### Payments
-Identify whether the transaction involves:
-- digital goods/services;
-- physical goods/services;
-- subscriptions;
-- donations;
-- financial services.
-
-Then verify the current Google Play Billing/Payments policy and any applicable regional programs.
-
-### User-generated content
-If users can upload/post/share content:
-- terms/user policy;
-- objectionable-content definitions;
-- reporting mechanism;
-- moderation;
-- blocking/reporting where applicable;
-- child-safety handling;
-must be reviewed.
-
-### AI-generated content
-If the app generates text, images, audio, or video:
-- identify restricted-content risks;
-- add appropriate safety controls;
-- verify current AI-generated-content requirements;
-- review user reporting/feedback mechanisms where applicable.
-
-### Children
-If children are a target audience or can reasonably use the app:
-- review Families Policy;
-- review data collection restrictions;
-- review ads/SDK restrictions;
-- review child-safety requirements.
-
-### Ads
-Verify:
-- ad placement is not deceptive;
-- notifications are not used for prohibited ads;
-- ad SDK behavior is understood;
-- child-directed rules are satisfied where applicable.
-
-### Store listing
-Check:
-- title;
-- short/full description;
-- screenshots;
-- icon;
-- claims;
-- ratings/reviews claims;
-- functionality descriptions;
-- regional behavior;
-- subscription/price claims.
-
-Metadata must accurately represent the app.
-
-### Functionality
-Before submission:
-- no crashes;
-- no broken flows;
-- no dead-end screens;
-- core functionality works;
-- reviewer can access the complete experience;
-- app behaves consistently.
-
-### Third-party SDKs
-The developer remains responsible for third-party code.
-For every SDK:
-- identify data collected;
-- identify data shared;
-- identify permissions;
-- check policy reputation/requirements;
-- check SDK-specific Play requirements;
-- remove unnecessary SDKs.
-
-## Common rejection-risk categories
-
-- deceptive behavior
-- privacy/data disclosure mismatch
-- excessive permissions
-- unauthorized background behavior
-- misleading metadata
-- broken functionality
-- low-quality/repetitive apps
-- prohibited content
-- payment violations
-- unsafe UGC
-- child-safety violations
-- malicious or abusive SDK behavior
-- review manipulation
+Canonical details: [Google Play Policy Deadlines](https://support.google.com/googleplay/android-developer/table/12921780). Monitor for later 2027 announcements.

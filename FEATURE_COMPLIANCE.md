@@ -1,84 +1,26 @@
 # Feature Compliance Template
 
-Copy this file for every new high-impact feature.
+**Feature / app / version / platforms / owner / date:**
+**Last verified / verification date / next review:**
+**Decision:** PASS | PASS WITH CONDITIONS | NEEDS REVIEW | HIGH RISK | BLOCKED
 
-FEATURE:
-DATE:
-APP:
-VERSION:
-PLATFORMS:
+## Risk and evidence
 
-## Feature summary
+```text
+User-facing behavior / audience and countries / data inventory / retention/deletion
+Permissions + scoped alternatives / background work / payments / tracking/ads
+UGC / AI / children / account / WebView-external links / SDK and native changes
+Google: policy, Data safety/declarations/disclosures, reviewer evidence, source URL
+Apple: guideline, App Privacy/Info.plist/privacy manifest/entitlements, reviewer evidence, source URL
+Future-policy check: policy, status, effective/enforcement date, preparation action
+```
 
-WHAT:
-WHY:
-WHO USES IT:
-USER-FACING BEHAVIOR:
+## Implementation and release audit
 
-## Risk scan
+```text
+Conditions / AndroidManifest + Gradle / Info.plist + PrivacyInfo.xcprivacy + entitlements
+pubspec/Pods/native code / privacy policy / console declarations / metadata
+test results / unresolved risks / final decision / verifier
+```
 
-- [ ] Personal data
-- [ ] Sensitive data
-- [ ] Location
-- [ ] Background location
-- [ ] Contacts
-- [ ] Camera
-- [ ] Microphone
-- [ ] Photos
-- [ ] Notifications
-- [ ] Payments
-- [ ] Tracking
-- [ ] Advertising
-- [ ] UGC
-- [ ] AI
-- [ ] Children/minors
-- [ ] Account creation
-- [ ] Account deletion
-- [ ] Background execution
-- [ ] Third-party SDK
-- [ ] WebView
-- [ ] External links
-
-## Google Play
-
-DECISION:
-POLICIES:
-PERMISSIONS:
-DECLARATIONS:
-DISCLOSURES:
-DATA SAFETY:
-STORE METADATA:
-REVIEWER REQUIREMENTS:
-RISKS:
-OFFICIAL SOURCES:
-
-## Apple
-
-DECISION:
-GUIDELINES:
-PERMISSIONS:
-DECLARATIONS:
-DISCLOSURES:
-APP PRIVACY:
-STORE METADATA:
-REVIEWER REQUIREMENTS:
-RISKS:
-OFFICIAL SOURCES:
-
-## Implementation conditions
-
-1.
-2.
-3.
-
-## Post-implementation audit
-
-IMPLEMENTED BEHAVIOR:
-MANIFEST CHANGES:
-PLIST CHANGES:
-PRIVACY CHANGES:
-SDK CHANGES:
-STORE CONSOLE CHANGES:
-TEST RESULTS:
-
-FINAL DECISION:
+Official sources override local guidance. Never describe the decision as a guarantee of approval.

@@ -1,51 +1,22 @@
 # Store Submission Compliance Checklist
 
+**Last verified / verification date:** 2026-09-24 · **Policy status:** ACTIVE · **Official source:** [POLICY_SOURCES.md](POLICY_SOURCES.md) · **Source type:** first-party directory · **Next review:** every submission.
+
 ## Google Play
 
-- [ ] Current Developer Program Policies checked
-- [ ] Policy deadlines checked
-- [ ] Data Safety completed accurately
-- [ ] Privacy policy URL works
-- [ ] Permissions justified
-- [ ] Special permission declarations completed
-- [ ] Target API requirements checked
-- [ ] Content rating completed
-- [ ] Ads declaration checked
-- [ ] Financial features declaration checked if applicable
-- [ ] Store metadata matches actual functionality
-- [ ] Screenshots match current app
-- [ ] App does not crash
-- [ ] Reviewer/demo credentials work
-- [ ] Reviewer instructions are complete
-- [ ] Third-party SDKs audited
+- [ ] Current policies, announcements and deadlines verified; target API compliant
+- [ ] Data Safety/data deletion, privacy policy/in-app disclosures, permissions and special declarations match binary/SDKs
+- [ ] Payments and country programs, UGC/Families/ads/financial/health declarations checked if applicable
+- [ ] Metadata, screenshots, ratings, reviewer credentials/instructions and all tracks are current
+- [ ] 2027 contacts/location/call-log/FGS impact assessed
 
 ## Apple
 
-- [ ] Current App Review Guidelines checked
-- [ ] App Privacy completed accurately
-- [ ] Privacy policy URL works
-- [ ] Permission purpose strings checked
-- [ ] Privacy manifests checked
-- [ ] Required reason APIs checked
-- [ ] Background modes justified
-- [ ] StoreKit/payment implementation checked
-- [ ] Account deletion checked
-- [ ] Login requirements checked
-- [ ] UGC moderation checked if applicable
-- [ ] Age rating checked
-- [ ] Metadata matches actual functionality
-- [ ] Screenshots match current app
-- [ ] Reviewer/demo credentials work
-- [ ] Reviewer notes explain special flows
-- [ ] Third-party SDKs audited
-- [ ] Production build tested on supported devices/OS versions
+- [ ] Current App Review Guidelines and upcoming requirements checked; Xcode/SDK upload requirement met
+- [ ] App Privacy, privacy policy, ATT, purpose strings, privacy manifests and required-reason APIs match binary/SDKs
+- [ ] Background modes, StoreKit/subscription, deletion/login, UGC, age rating, regional/EU and medical-status implications checked
+- [ ] Metadata, screenshots, reviewer credentials/notes and production-device testing completed
 
-## Final decision
+## Final record
 
-GOOGLE PLAY:
-APPLE:
-OVERALL:
-BLOCKERS:
-REQUIRED FIXES:
-OFFICIAL SOURCES VERIFIED:
-VERIFICATION DATE:
+`Google decision / Apple decision / overall decision / blockers / fixes / source URLs / verification date / next review`. A completed checklist is evidence, not an approval guarantee.

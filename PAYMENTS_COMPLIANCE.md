@@ -1,37 +1,7 @@
 # Payments Compliance
 
-Before implementing any payment feature, classify the transaction.
+**Last verified / verification date:** 2026-09-24 · **Policy status:** ACTIVE / regional variation · **Effective / enforcement:** territory/program-specific · **Official source:** [Google Play Billing](https://developer.android.com/google/play/billing), [Google US update](https://support.google.com/googleplay/android-developer/answer/15582165), [Apple guidelines](https://developer.apple.com/app-store/review/guidelines/) · **Source type:** first-party · **Next review:** before payment design and each release.
 
-## Classification
+Classify every flow: digital good/service, subscription, physical good, real-world service, donation, P2P, financial service or marketplace. Record countries/storefront, app distribution, payment provider, product type, link/call-to-action, recurring terms, restore/manage/cancellation path, console settings and official program terms.
 
-- Digital goods
-- Digital services
-- Subscription
-- Physical goods
-- Real-world service
-- Peer-to-peer payment
-- Financial service
-- Donation
-- Marketplace transaction
-
-## Required review
-
-GOOGLE PLAY:
-- current Payments policy
-- Google Play Billing requirements
-- applicable regional programs
-
-APPLE:
-- current payment/App Review requirements
-- StoreKit requirements
-- applicable regional programs
-
-## Never assume
-
-Do not assume that:
-- a web checkout is automatically permitted;
-- an external payment link is automatically permitted;
-- a subscription can use any payment processor;
-- regional exceptions apply globally.
-
-Always verify the current official rules for the target countries and current app distribution model.
+Do not assume web checkout, external links, alternative billing or entitlement exceptions are permitted globally. Confirm the current local program and enrollment obligations before implementation; separately audit financial-services eligibility and disclosures.

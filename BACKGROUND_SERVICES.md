@@ -1,59 +1,7 @@
 # Background Services Compliance
 
-Treat all background execution as HIGH RISK.
+**Last verified / verification date:** 2026-09-24 · **Policy status:** ACTIVE + FUTURE REQUIREMENT · **Effective / enforcement:** Play FGS geofencing change 2027-01-27 · **Official source:** [Google deadlines](https://support.google.com/googleplay/android-developer/table/12921780), [background location](https://support.google.com/googleplay/android-developer/answer/9799150), [Apple guidelines](https://developer.apple.com/app-store/review/guidelines/) · **Source type:** first-party · **Next review:** design, implementation and release.
 
-## Before implementation
+Treat background execution as HIGH RISK. Record task, trigger, frequency, foreground/background/terminated behavior, APIs, data, battery impact, user benefit/control, fallback, manifest/Info.plist/entitlement, declarations and reviewer evidence.
 
-Identify:
-- exact background task;
-- frequency;
-- trigger;
-- required data;
-- user-visible purpose;
-- battery impact;
-- foreground/background/terminated behavior;
-- platform APIs;
-- fallback behavior.
-
-## Location
-
-For background location:
-- prove it is core functionality;
-- use minimum necessary accuracy/frequency;
-- explain why foreground-only access is insufficient;
-- verify platform policy;
-- verify store declarations;
-- provide user controls;
-- stop tracking when the feature/session ends where appropriate.
-
-## Battery
-
-Prefer:
-- event-driven APIs;
-- significant-change/geofencing where appropriate;
-- adaptive intervals;
-- batching;
-- OS-managed scheduling;
-- stopping work when no longer needed.
-
-Avoid:
-- permanent high-frequency GPS polling;
-- unnecessary foreground services;
-- hidden tracking;
-- aggressive wake locks;
-- battery-intensive loops.
-
-## Compliance report
-
-BACKGROUND FEATURE:
-USER BENEFIT:
-TRIGGER:
-FREQUENCY:
-DATA:
-ANDROID API:
-IOS API:
-BATTERY IMPACT:
-USER CONTROL:
-GOOGLE REQUIREMENTS:
-APPLE REQUIREMENTS:
-DECISION:
+Prefer OS scheduling, event-driven work, batching and stopping work when unused. Background location requires a core, user-expected feature and Play declaration/disclosure evidence where applicable. Do not use geofencing as a foreground-service use case after 2027-01-27; migrate to Geofence API. Apple background modes must match genuine app function, never a keep-alive workaround.

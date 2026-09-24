@@ -1,54 +1,14 @@
 # Privacy Compliance
 
-Use this file whenever a feature collects, stores, processes, transmits, or shares user/device data.
+**Last verified / verification date:** 2026-09-24 · **Policy status:** ACTIVE · **Effective / enforcement:** ongoing · **Official source:** [Google User Data](https://support.google.com/googleplay/android-developer/answer/10144311), [Apple App Privacy](https://developer.apple.com/app-store/app-privacy-details/) · **Source type:** first-party · **Next review:** before feature/release.
 
-## Required analysis
+Use for any data collected, inferred, stored, transmitted or shared by Dart, native code or SDKs.
 
-For every data element identify:
+```text
+DATA / SOURCE / PURPOSE / COLLECTION OPTIONAL? / STORAGE REGION / RETENTION
+RECIPIENTS + SDK / SECURITY / USER CONTROL + DELETE PATH / PRIVACY POLICY SECTION
+GOOGLE DATA SAFETY (collection, sharing, purpose) / APPLE APP PRIVACY (linked, tracking, purpose)
+LAST VERIFIED / OFFICIAL SOURCE / DECISION
+```
 
-DATA:
-SOURCE:
-WHY COLLECTED:
-WHERE STORED:
-RETENTION:
-WHO RECEIVES IT:
-SDK/THIRD PARTY:
-ENCRYPTION:
-USER CONTROL:
-DELETE METHOD:
-GOOGLE PLAY DATA SAFETY:
-APPLE APP PRIVACY:
-PRIVACY POLICY SECTION:
-
-## Data categories to check
-
-- Name
-- Email
-- Phone
-- Address
-- Contacts
-- Precise location
-- Approximate location
-- Photos
-- Videos
-- Audio
-- Messages
-- Device identifiers
-- Advertising identifiers
-- Usage analytics
-- Crash data
-- Authentication data
-- Financial information
-- Health information
-- Sensitive personal information
-
-## Privacy gate
-
-Do not implement data collection until:
-- purpose is defined;
-- minimum collection is established;
-- platform permission requirements are understood;
-- disclosure requirements are understood;
-- retention/deletion behavior is defined;
-- third-party SDK behavior is known;
-- store privacy declarations can be truthfully completed.
+Inventory identifiers, location, contacts, media, communications, health/financial data, authentication, diagnostics and tracking. Minimize collection, define retention/deletion, and make the policy, in-app disclosure and store forms match the shipped binary. An account-creating Play app needs in-app deletion and a web deletion-request route. A privacy manifest assists Apple disclosure but does not replace App Privacy answers or the privacy policy.
